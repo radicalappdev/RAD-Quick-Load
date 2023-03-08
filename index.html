@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
   <style>
     @import "./src/style.css";
   </style>
@@ -10,14 +11,28 @@
 </head>
 
 <body>
-  <h1>Alright. You're set.</h1>
-  <h2>Now build something amazing!</h2>
-  <button type="button">Click Me!</button>
+  <div class="container">
 
-  <label for="filePicker">Choose a profile picture:</label>
 
-  <input type="file" id="filePicker" name="filePicker" accept="text/json">
+    <nav>
+      <ul>
+        <hgroup>
+          <h1>FMComparison Export</h1>
+          <h2>Quick Load Demo</h2>
+        </hgroup>
+      </ul>
+      <ul>
+        <input type="file" id="fileInput" name="fileInput" accept="text/json">
+      </ul>
+    </nav>
+    <article>
+      <!-- Load the JSON data from the loaded var as a tree -->
 
+
+
+    </article>
+
+  </div>
   <script type="module">
     import "./src/index.js";
   </script>
