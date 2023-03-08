@@ -23,3 +23,37 @@ At this point you should see the web viewer on the layout load up with the HTML 
 
 ## Use this kit
 Now you're ready to use this kit to create awesome JS widgets.
+
+## Adding Vue to the project
+- run `npm install vue` to add Vue JS to the project
+- Create a new file in the src folder called `App.vue`
+  - Note, parsel will add a dependency called `"@parcel/transformer-vue": "^2.8.1",`
+
+App.vue contents
+```
+<template>
+  <div>Hello {{ name }}!</div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        name: "Vue",
+      };
+    },
+  };
+</script>
+```
+
+
+- Replace the contents of the index.js file with something like this:
+index.js content
+```
+import { createApp } from "vue";
+import App from "./App.vue";
+
+const app = createApp(App);
+app.mount("#app");
+```
+
